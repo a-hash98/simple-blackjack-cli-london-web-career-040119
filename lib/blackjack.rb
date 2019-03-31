@@ -65,6 +65,7 @@ def runner
   #display_card_total(card_total)
   loop do
     display_card_total(card_total)
+    puts card_total
     if card_total != nil &&  card_total > 21
       end_game(card_total)
       break

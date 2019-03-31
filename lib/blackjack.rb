@@ -62,15 +62,12 @@ end
 def runner
   welcome
   card_total = initial_round.to_i
+  display_card_total(card_total)
   #display_card_total(card_total)
-  loop do
+  until card_total != nil &&  card_total > 21
+    hit?(card_total)
     display_card_total(card_total)
-    if card_total != nil &&  card_total > 21
-      end_game(card_total)
-      break
-    else
-      hit?(card_total)
-    end
-  end
-  #end_game(card_total)
+    
+    end_game(card_total)
+    
 end
